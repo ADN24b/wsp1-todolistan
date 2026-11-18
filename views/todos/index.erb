@@ -1,1 +1,16 @@
-<img src="/img/glhf.png">
+<h2>You got shit to do pal</h2>
+
+<ul>
+<% @todos.each do |todo| %>
+<li>
+		<a href="/todos/<%= todo["id"]%>">
+				<%= todo["name"] %></a>
+                <p> <%= todo["description"]%>
+				<form action="/todos/<%=todo["id"]%>/delete" method="post">
+				<input type="submit" value="Ta bort">
+				<a class="edit" href="/todos/<%=todo["id"]%>/edit">Ändra</a>
+				</form>
+	</li>
+<% end %>
+</ul>
+

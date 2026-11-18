@@ -7,6 +7,24 @@
     <link rel="stylesheet" type="text/css" href="/style.css">
 </head>
 <body>
-  <%= yield %>
+    <header>
+        <img src="/img/glhf.png">
+        <h1 class="logo">Todolistan</h1>
+    </header>
+    <hr>
+    <nav>
+        <ul>
+            <li><a href="/">All Tasks</a></li>
+            <li><a href="/categories">All Categories</a></li>
+            <li><a href="/todos/new">New Task</a></li>
+        </ul>
+    </nav>
+    <hr>
+    <%= yield %>
+    <hr>
+    <footer>
+        <a href="mailto:contact@palantir.com" target="_blank"> Kontakta dig själv </a>
+    </footer>
 </body>
 </html>
+

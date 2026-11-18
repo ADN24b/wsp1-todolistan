@@ -13,7 +13,9 @@ class App < Sinatra::Base
       return @db
     end
 
-    get '/' do        
+    get '/todos' do        
+        @todos = db.execute('SELECT * FROM todos')
+        ap @todos
         erb(:'todos/index')
     end
 
